@@ -19,10 +19,22 @@ public class AT13_HashMap_List {
         map1.put("Name", "John");
         map1.put("Age", "30");
         listOfMaps.add(map1);
+        System.out.println("listOfMaps"+listOfMaps);
 
         Map<String, String> map2 = new HashMap<>();
         map2.put("Name", "Alice");
         map2.put("Age", "25");
         listOfMaps.add(map2);
+        System.out.println("listOfMaps"+listOfMaps);
+
+        // Accessing elements from the list of maps
+        for (Map<String, String> map : listOfMaps) {
+            for (Map.Entry<String, String> entry : map.entrySet()) {
+                String key =entry.getKey();
+                String value =entry.getValue();
+                System.out.println(key + ": " + value);
+            }
+
+        }
     }
 }
