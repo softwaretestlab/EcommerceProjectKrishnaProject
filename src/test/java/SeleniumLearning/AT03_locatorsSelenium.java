@@ -26,9 +26,18 @@ public class AT03_locatorsSelenium {
         // last name enter
         //by name --->name="lastName"
         driver.findElement(By.name("lastName")).sendKeys("Smith");
+        //Link Text --->Catalogues
+        driver.findElement(By.linkText("Catalogues")).click();
         //stops code for 5sec -- not recommended
         Thread.sleep(5000);
         //Partial Link Text --->Catalo
-        driver.findElement(By.xpath("Catalo")).click();
+       // driver.findElement(By.partialLinkText("Catalo")).click();
+
+        //click on goodguys logo -->by.classname-->click
+        // we get error as compound class names not permitted
+        //because in classname we have 2 words
+        // driver.findElement(By.className("img-responsive good_guy_logo")).click();
+        //use this way
+        driver.findElement(By.className("good_guy_logo")).click();
     }
 }
