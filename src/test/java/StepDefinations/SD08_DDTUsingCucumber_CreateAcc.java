@@ -1,10 +1,10 @@
 package StepDefinations;
+
 import SeleniumCucumberCode.AT08_DDT_CreateAnAccount;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
 import java.io.IOException;
-
 
 public class SD08_DDTUsingCucumber_CreateAcc {
 
@@ -13,8 +13,8 @@ public class SD08_DDTUsingCucumber_CreateAcc {
         AT08_DDT_CreateAnAccount.NavtoCrateAcc();
     }
     @Then("enter data {string},{string},{string}")
-    public void enter_data(String Firstname, String LastName, String EmailAddress) {
-        AT08_DDT_CreateAnAccount.EnterAccDetails("Firstname","LastName","EmailAddress");
-    }
+    public void enter_data(String FirstName, String LastName, String EmailAddress) {
+        AT08_DDT_CreateAnAccount.EnterAccDetails(FirstName,LastName,EmailAddress);
 
+    }
 }
