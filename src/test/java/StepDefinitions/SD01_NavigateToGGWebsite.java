@@ -1,11 +1,8 @@
-package StepDefinations;
+package StepDefinitions;
 
-import BaseClass.OpenBrowser;
-import PropertiesFile.ReadPropertiesFile;
 import SeleniumCucumberCode.AT01_CCNavigateToGGwebsite;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import org.junit.Assert;
 
 import java.io.IOException;
 

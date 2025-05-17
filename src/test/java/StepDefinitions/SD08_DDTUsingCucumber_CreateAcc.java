@@ -1,4 +1,4 @@
-package StepDefinations;
+package StepDefinitions;
 
 import SeleniumCucumberCode.AT08_DDT_CreateAnAccount;
 import io.cucumber.java.en.Given;
