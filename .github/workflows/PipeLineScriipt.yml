@@ -25,11 +25,14 @@ jobs:
       - name: Install Chrome
         uses: browser-actions/setup-chrome@v1
 
-      - name: Build and run tests with Maven
-        run: mvn clean test
+      - name: Install Xvfb for headless GUI tests
+        run: sudo apt-get update && sudo apt-get install -y xvfb
 
-      - name: Upload Test Results
-        if: always()
+      - name: Build and run tests with Maven (headless)
+        run: xvfb-run mvn clean test
+
+      - name: Upload Test Results if tests fail
+        if: failure()
         uses: actions/upload-artifact@v4
         with:
           name: surefire-reports
