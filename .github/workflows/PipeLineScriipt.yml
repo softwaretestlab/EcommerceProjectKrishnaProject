@@ -1,4 +1,4 @@
-name: Maven CI/CD
+name: Maven CI/CD with Cucumber Reports
 
 on:
   push:
@@ -8,7 +8,6 @@ on:
 
 jobs:
   build_and_test:
-    name: Build and Test with Maven
     runs-on: ubuntu-latest
 
     steps:
@@ -28,12 +27,19 @@ jobs:
       - name: Install Xvfb for headless GUI tests
         run: sudo apt-get update && sudo apt-get install -y xvfb
 
-      - name: Build and run tests with Maven (headless)
-        run: xvfb-run mvn clean test
+      - name: Build, test and generate reports
+        run: xvfb-run mvn clean verify
 
-      - name: Upload Test Reports (Surefire)
+      - name: Upload Surefire Test Reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: surefire-reports
           path: target/surefire-reports
+
+      - name: Upload Cucumber HTML Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cucumber-html-reports
+          path: target/cucumber-html-reports
