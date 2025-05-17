@@ -1,4 +1,5 @@
 Feature: GG Homepage
+  @Smokey
   Scenario: Naviage to GG website
     Given open browser and enter url and navigate to GG website
     Then get title and assert

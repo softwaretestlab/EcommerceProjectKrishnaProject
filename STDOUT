@@ -1,0 +1,5 @@
+
+@Smokey
+Scenario: Naviage to GG website                               # src/test/resources/FeatureFile/FF01_NavigateToGGWebsite.feature:3
+  Given open browser and enter url and navigate to GG website # StepDefinations.SD01_NavigateToGGWebsite.open_browser_and_enter_url_and_navigate_to_gg_website()
+  Then get title and assert                                   # StepDefinations.SD01_NavigateToGGWebsite.get_title_and_assert()
