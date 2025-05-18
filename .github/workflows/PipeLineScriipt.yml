@@ -30,12 +30,12 @@ jobs:
       - name: Build, test and generate reports
         run: xvfb-run mvn clean verify
 
-      - name: Upload Surefire Test Reports
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: surefire-reports
-          path: target/surefire-reports
+#      - name: Upload Surefire Test Reports
+#        if: always()
+#        uses: actions/upload-artifact@v4
+#        with:
+#          name: surefire-reports
+#          path: target/surefire-reports
 
       - name: Upload Cucumber HTML Reports
         if: always()
