@@ -42,4 +42,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: cucumber-html-reports
-          path: target/cucumber-html-reports
+          path: target/cucumber-JVM-reports/cucumber-html-reports
