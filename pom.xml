@@ -131,7 +131,7 @@
               <projectName>EcommerceProjectKrishnaProject</projectName>
               <!-- output directory for the generated report -->
               <outputDirectory>${project.build.directory}/cucumber-JVM-reports</outputDirectory>
-               <parallelTesting>true</parallelTesting>
+              <parallelTesting>true</parallelTesting>
               <checkBuildResult>false</checkBuildResult>
             </configuration>
           </execution>
